@@ -1,10 +1,9 @@
 import { PostsService } from '@/services/posts.service'
 import { ChildProps } from '@/types'
-import { Navbar, Sidebar } from './components'
+import { Navbar, Sidebar } from '../(home)/components'
 
-export default async function HomeLayout({ children }: ChildProps) {
+export default async function PostsLayout({ children }: ChildProps) {
 	const authors = await PostsService.getAuthorsWithPosts()
-
 	return (
 		<div className='h-full'>
 			<Navbar />
