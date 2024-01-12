@@ -11,7 +11,7 @@ export const API_URL: string =
 let backend_url =
 	process.env.NODE_ENV === 'development'
 		? 'http://localhost:3001'
-		: 'it-blog-frontend-10.vercel.app'
+		: 'https://it-blog-frontend-10.vercel.app'
 
 export const PostsService = {
 	async getAllPosts(): Promise<Post[]> {
