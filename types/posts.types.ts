@@ -11,6 +11,14 @@ export interface Post {
 	author: Author
 	slug: string
 	createdAt: Date
+	comments: IComment[]
+}
+
+export interface IComment {
+	id: string
+	email: string
+	comment: string
+	createdAt: string
 }
 
 export interface Author {

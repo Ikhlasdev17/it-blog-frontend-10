@@ -2,6 +2,7 @@ import { Post } from '@/types/posts.types'
 import HTMLReactParser from 'html-react-parser/lib/index'
 import moment from 'moment'
 import Link from 'next/link'
+import PostComments from './post-comments'
 
 export default function PostDetailsComponent({
 	content,
@@ -10,6 +11,7 @@ export default function PostDetailsComponent({
 	excerpt,
 	cover,
 	createdAt,
+	comments,
 }: Post) {
 	return (
 		<div>
@@ -51,6 +53,8 @@ export default function PostDetailsComponent({
 
 				<p className='italic text-center text-lg'>{author.bio}</p>
 			</div>
+
+			<PostComments comments={comments} />
 		</div>
 	)
 }
