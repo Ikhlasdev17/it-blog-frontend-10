@@ -58,7 +58,7 @@ export default function PostComments({ comments }: { comments: IComment[] }) {
 		<div className='my-12'>
 			<h1 className='mb-6 flex items-center text-xl gap-4'>
 				<FaComment />
-				Comments ({comments.length})
+				Comments ({comments?.length})
 			</h1>
 			<form onSubmit={onComment} className='my-6'>
 				<Input
@@ -80,7 +80,7 @@ export default function PostComments({ comments }: { comments: IComment[] }) {
 				/>
 				<Button disabled={loading}>Submit</Button>
 			</form>
-			{comments.map(item => <CommentItem {...item} key={item.id} />).reverse()}
+			{comments?.map(item => <CommentItem {...item} key={item.id} />).reverse()}
 		</div>
 	)
 }
