@@ -10,7 +10,7 @@ export interface Post {
 	content: Content
 	author: Author
 	slug: string
-	createdAt: Date
+	createdAt: string
 	comments: IComment[]
 }
 

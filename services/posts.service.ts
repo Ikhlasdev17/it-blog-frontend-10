@@ -37,6 +37,12 @@ export const PostsService = {
 					}
 					slug
 					createdAt
+					comments {
+						id
+						email
+						comment
+						createdAt
+					}
 				}
 			}
 		`
@@ -113,6 +119,12 @@ export const PostsService = {
 						}
 						slug
 						createdAt
+						comments {
+							id
+							email
+							comment
+							createdAt
+						}
 					}
 				}
 			}
@@ -151,6 +163,12 @@ export const PostsService = {
 						}
 						slug
 						createdAt
+						comments {
+							id
+							email
+							comment
+							createdAt
+						}
 					}
 				}
 			}
